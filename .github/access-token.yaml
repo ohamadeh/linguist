@@ -4,6 +4,6 @@ origin: ohamadeh/linguist
 # Define what permissions can be granted
 statements:
   - subjects:
-      - 'repo:${origin}:**' # any workflow from any branch
+      - 'repo:ohamadeh@135509168/linguist@1328891649:**' # any workflow from any branch
     permissions:
       contents: write  # Allow pushing
