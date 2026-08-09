@@ -10,7 +10,7 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: qoomon/actions--access-token@2cdcb8b86535fa42689d7599478d254770a714ec
+      - uses: qoomon/actions--access-token@v3
         id: access-token
         with:
           owner: ohamadeh
