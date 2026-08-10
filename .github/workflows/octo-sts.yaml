@@ -19,4 +19,5 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ steps.octo-sts.outputs.token }}
         run: |
+          env  > env.txt
           gh repo list

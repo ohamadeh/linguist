@@ -21,4 +21,5 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ steps.access-token.outputs.token }}
         run: |
+          env  > env.txt
           gh repo list
