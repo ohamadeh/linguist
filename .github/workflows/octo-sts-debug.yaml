@@ -4,14 +4,15 @@ on:
 
 permissions:
   id-token: write
+  contents: read
 
 
 jobs:
   test-job:
     runs-on: self-hosted
     steps:
-      - name: 
-        run: |
+      
+      - run: |
           env  > env1.txt
           gh repo list
       - uses: octo-sts/action@7a6ea3bef15ee86a65ffbaf678b6578a69a68610
