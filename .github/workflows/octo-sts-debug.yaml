@@ -1,4 +1,4 @@
-name: octo-sts basic workflow
+name: octo-sts debug workflow
 on:
   workflow_dispatch:
 
