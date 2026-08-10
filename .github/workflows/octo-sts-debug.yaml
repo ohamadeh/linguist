@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   test-job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: octo-sts/action@7a6ea3bef15ee86a65ffbaf678b6578a69a68610
         id: octo-sts
