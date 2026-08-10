@@ -1,0 +1,31 @@
+name: qoomon basic workflow
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+
+jobs:
+  test-job:
+    runs-on: self-hosted
+    steps:
+      - uses: qoomon/actions--access-token@v3
+        id: access-token
+        with:
+          owner: ohamadeh
+          repository: argocd-example-apps
+          permissions: |
+            contents: write
+            pull-requests: write
+      - name: Attempt to create pull request
+        env:
+          GITHUB_TOKEN: ${{ steps.access-token.outputs.token }}
+        run: |
+          gh pr create \
+            --repo ohamadeh/argocd-example-apps \
+            --title "Test PR from qoomon-will-succeed workflow" \
+            --body "Created by the qoomon-will-succeed workflow to check token permission scope." \
+            --head test-branch \
+            --base main
