@@ -1,4 +1,4 @@
-name: qoomon basic workflow
+name: qoomon workflow will succeed
 on:
   workflow_dispatch:
 
