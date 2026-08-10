@@ -12,7 +12,9 @@ jobs:
     runs-on: self-hosted
     steps:
       
-      - run: |
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           env  > env1.txt
           gh repo list
       - uses: octo-sts/action@7a6ea3bef15ee86a65ffbaf678b6578a69a68610
